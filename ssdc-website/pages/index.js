@@ -1,5 +1,7 @@
 import Head from 'next/head'
-
+import {BsFilledMoonStarsFill} from 'react-icons/bs' 
+import Footer from './components/Footer'
+import Board from './components/Board'
 
 
 export default function Home() {
@@ -11,10 +13,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main >
+      <main className=' bg-white' >
         <section >
-          
+          <nav className=' bg-red-800 p-8 mx-0 mb-12 flex justify-between text-xl text-neutral-100'>
+            <ul className='flex items-center gap-8'>
+              <li><a href="">SSDC | Seneca Software Developers Club</a></li>
+            </ul>
+            <ul className='flex items-center gap-8'>
+              <li className='hover:text-slate-300'><a href="">Board</a></li>
+              <li className='hover:text-slate-300'><a href="">About</a></li>
+              <li className='hover:text-slate-300'><a href="">Get Involved</a></li>
+            </ul>
+          </nav>
         </section>
+
+        <section>
+          <Board />
+        </section>
+
+        <Footer />
       </main>
     </div>
   )
